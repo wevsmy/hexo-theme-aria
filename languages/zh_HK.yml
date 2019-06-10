@@ -47,8 +47,9 @@ commentjs:
 valine:
   placeholder: 在這裏說點什麼……
 
-poweredby: 由 %s 強力驅動
-theme: 主題 %s
+poweredby: 由 %s 驅動
+theme: 基於 %s 主題
+modify: 由 %s 修改
 
 accessibility:
   prev_page: 上一頁
