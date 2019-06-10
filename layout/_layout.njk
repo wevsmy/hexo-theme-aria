@@ -168,6 +168,7 @@
     </script>
     {% block js %}{% endblock %}
     <script defer type="text/javascript" src="{{ url_for("js/custom.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for("js/love.js") }}"></script>
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang or page.language or config.language }}"  data-spy="scroll" data-target=".list-group">
