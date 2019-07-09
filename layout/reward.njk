@@ -1,7 +1,15 @@
 {% block reward %}
 <div class="reward" id="reward">
-  <p>{{ theme.reward.comment }}</p>
-  <button id="reward-button" class="button" disable="enable">{{ __("reward.button") }}</button>
+  <div class="liker">
+	<div class="liker-canvas">
+		<canvas class="hearts-canvas"></canvas>
+	</div>
+	<p>{{ theme.reward.comment }}</p>
+  	<button id="reward-button" class="btn" disable="enable">
+  	    <i class="fas fa-heart"></i>
+  	</button>
+  	<span>{{ __("reward.button") }}</span>
+  </div>
   <div id="qr" class="qr" style="display: none;" aria-hidden="true">
     {% if theme.reward.wechatpay_qrcode %}
     <div id="wechat">

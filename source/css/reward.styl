@@ -3,30 +3,66 @@
 .reward {
   margin: 1em auto;
   width: 90%;
+  //height 10em;
   text-align: center;
   color: $color-reward-font;
+
   .qr {
     text-align: center;
+    //position: absolute;
+
     div {
       padding: 0.5em;
       display: inline-block;
+
       img {
         width: 10em;
         display: inline-block;
       }
+
       span {
         display: block;
       }
     }
   }
-  .button {
-    cursor: pointer;
-    border: none;
-    outline: 0;
-    padding: 0em 0.5em;
-    margin: 0.5em 0;
-    background: $color-button-reward-background;
-    border: 0.1em solid $color-button-reward-border;
-    line-height: 2em;
+
+  .liker {
+    position: relative;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+	.liker-canvas {
+	position: absolute;
+	width: 90%;
+	margin: 0 5%;
+	top: -23em;
+	}
+
+    span {
+      font-family: monospace;
+      color: #F92A82;
+	  margin: 0 auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .btn {
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+	  margin: 0 50%;
+      cursor: pointer;
+      transform: translate(-50%, -10%);
+      background-color: #FF4D80;
+      color: #fff;
+      outline: none;
+      transition: 0.3s ease;
+      box-shadow: 0 3px 10px #F92A82;
+    }
   }
 }
