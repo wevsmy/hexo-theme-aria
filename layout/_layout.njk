@@ -23,6 +23,9 @@
     {% if theme.google_verification %}
     <meta name="google-site-verification" content="{{ theme.google_verification }}">
     {% endif %}
+    {% if theme.bing_content_verification %}
+    <meta name="msvalidate.01" content="{{ theme.bing_content_verification }}" />
+    {% endif %}
     {% if page.keywords %}
     <meta name="keywords" content="{{ page.keywords.join(", ") }}">
     {% elif theme.keywords %}
