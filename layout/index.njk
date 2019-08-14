@@ -57,15 +57,37 @@
           {%- endfor %}
         </span>
         {% endif %}
+
         {% if post.comment !== false and theme.comment.enable %}
-        {% if theme.comment.disqus_shortname %}
-        {% if post.categories or post.date %}
-        <span class="post-meta-divider divider">|</span>
-        {% endif %}
-        <span class="post-comment-count">
-          <i class="far fa-comments"></i><span><a href="{{ url_for(post.path) }}#disqus_thread" itemprop="discussionUrl"><span class="post-comment-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentCount"></span></a></span>
-        </span>
-        {% endif %}
+
+            {% if theme.comment.disqus_shortname %}
+                {% if post.categories or post.date %}
+                <span class="post-meta-divider divider">|</span>
+                {% endif %}
+                <span class="post-comment-count">
+                    <i class="far fa-comments"></i>
+                    <span>
+                        <a href="{{ url_for(post.path) }}#disqus_thread" itemprop="discussionUrl">
+                            <span class="post-comment-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentCount"></span>
+                        </a>
+                    </span>
+                </span>
+
+            {% elif theme.comment.commentjs.enable %}
+                 <span class="post-meta-divider divider">|</span>
+                 <span class="post-comment-count">
+                     <i class="far fa-comments"></i>
+                     <span>
+                         <a href="{{ url_for(post.path) }}#comment-thread" itemprop="discussionUrl">
+                            <span class="post-comment-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentCount">
+                                 <span id="{{ post.title }}">0</span> Comments
+                            </span>
+                         </a>
+                     </span>
+                 </span>
+
+            {% endif %}
+
         {% endif %}
       </div>
     </header>
