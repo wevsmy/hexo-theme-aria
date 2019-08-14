@@ -9,6 +9,9 @@
   	    <i class="fas fa-heart"></i>
   	</button>
   	<span>{{ __("reward.button") }}</span>
+  	{% if theme.reward.button_effects %}
+  	    <script type="text/javascript" src="{{ url_for("js/heartsFlow.js") }}"></script>
+  	{% endif %}
   </div>
   <div id="qr" class="qr" style="display: none;" aria-hidden="true">
     {% if theme.reward.wechatpay_qrcode %}
